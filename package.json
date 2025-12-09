@@ -1,0 +1,26 @@
+{
+  "name": "trabalho_finalppi",
+  "version": "1.0.0",
+  "description": "trabalho final de PPI",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gustavo14nico/Trabalho_FinalPPI.git"
+  },
+  "author": "Gustavo de Assis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gustavo14nico/Trabalho_FinalPPI/issues"
+  },
+  "homepage": "https://github.com/Gustavo14nico/Trabalho_FinalPPI#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}
