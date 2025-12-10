@@ -61,7 +61,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
     session({
-        secret: "minh4Chav3S3cr3t4",
+        secret: "m1nh4Ch4v3S3cr3t4",
         resave: true,
         saveUninitialized: true,
         cookie: {
@@ -559,7 +559,6 @@ app.get("/home", auth, (req, res) => {
 
 });
 
-// CSS comum simplificado
 const commonStyles = `
     body {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -901,7 +900,6 @@ app.get("/listagem/equipes", auth, (req, res) => {
 app.get("/cadastro/jogador", auth, (req, res) => {
     const equipeSelecionada = req.query.equipe;
 
-    // Se não houver equipe selecionada, mostrar página de seleção
     if (!equipeSelecionada) {
         if (ListaEquipe.length === 0) {
             let conteudo = `<!DOCTYPE html>
@@ -938,7 +936,6 @@ app.get("/cadastro/jogador", auth, (req, res) => {
             return res.send(conteudo);
         }
 
-        // Mostrar página de seleção de equipe
         let opcoesEquipes = "";
         for (let i = 0; i < ListaEquipe.length; i++) {
             let quantidadeJogadores = 0;
@@ -993,7 +990,6 @@ app.get("/cadastro/jogador", auth, (req, res) => {
         return res.send(conteudo);
     }
 
-    // Se houver equipe selecionada, mostrar formulário de cadastro
     let opcoesEquipes = "";
     for (let i = 0; i < ListaEquipe.length; i++) {
         const selected = equipeSelecionada === ListaEquipe[i].nomeEquipe ? ' selected' : '';
